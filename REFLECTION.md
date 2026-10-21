@@ -10,7 +10,7 @@ Imperatively, I write every step myself, like creating elements, setting their t
 
 JSX treats lowercase tags like `<header>` as normal HTML elements and capitalised tags like `<Header />` as React components. If the name started with a lowercase letter, React would try to render an HTML tag with that name instead of calling my function.
 
-3. What does a fragment <>...</> do, and why not just use a <div>?
+3. What does a fragment <>...</> do, and why not just use a `<div>`?
 
 A fragment lets a component return several elements wrapped as one, without adding an extra element to the page. A `<div>` would add an unnecessary node to the DOM that could break the layout or styling, for example between the header, main and footer.
 
