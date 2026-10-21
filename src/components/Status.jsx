@@ -1,6 +1,19 @@
 // Small components for the loading and error states of fetched data.
 export function Loading() {
-  return <p className="muted" role="status">Loading menus…</p>
+  return (
+    <div role="status" aria-label="Loading menus…">
+      <div className="vendor-grid">
+        {[1, 2].map((n) => (
+          <div key={n} className="card skeleton skeleton-vendor" />
+        ))}
+      </div>
+      <div className="grid skeleton-grid">
+        {[1, 2, 3, 4].map((n) => (
+          <div key={n} className="card skeleton skeleton-menu" />
+        ))}
+      </div>
+    </div>
+  )
 }
 
 export function ErrorMessage({ message, onRetry }) {
