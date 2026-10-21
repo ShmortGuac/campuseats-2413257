@@ -154,3 +154,6 @@ a.card:hover { border-color: var(--green-light); }
   .nav { flex-wrap: wrap; gap: 0.4rem 1rem; font-size: 0.95rem; }
   .container { padding: 1rem; }
 }
+
+/* Personal feature (7): order notes per item */
+.cart-note { grid-column: 1 / -1; padding: 0.5rem; border: 1px solid #c5cbd3; border-radius: 8px; font: inherit; resize: vertical; }
