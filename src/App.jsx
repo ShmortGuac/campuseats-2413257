@@ -54,8 +54,14 @@ function App() {
           line.item.id === item.id ? { ...line, qty: line.qty + 1 } : line
         )
       }
-      return [...prevCart, { item, qty: 1 }]   // a NEW array, never cart.push()
+      return [...prevCart, { item, qty: 1, note: '' }]   // a NEW array, never cart.push()
     })
+  }
+
+  function handleChangeNote(itemId, note) {
+    setCart((prevCart) =>
+      prevCart.map((line) => (line.item.id === itemId ? { ...line, note } : line))
+    )
   }
 
   function handleChangeQty(itemId, delta) {
@@ -80,7 +86,7 @@ function App() {
   let content
   if (view === 'cart') {
     content = (
-      <CartPage cart={cart} onChangeQty={handleChangeQty}
+      <CartPage cart={cart} onChangeQty={handleChangeQty} onChangeNote={handleChangeNote}
                 onRemove={handleRemove} onPlaceOrder={handlePlaceOrder} />
     )
   } else if (view === 'done') {
