@@ -157,3 +157,10 @@ a.card:hover { border-color: var(--green-light); }
 
 /* Personal feature (7): order notes per item */
 .cart-note { grid-column: 1 / -1; padding: 0.5rem; border: 1px solid #c5cbd3; border-radius: 8px; font: inherit; resize: vertical; }
+
+/* Stretch: skeleton loading cards */
+.skeleton { background: #e4e7eb; box-shadow: none; animation: pulse 1.2s ease-in-out infinite; }
+.skeleton-vendor { height: 96px; }
+.skeleton-menu { height: 200px; }
+.skeleton-grid { margin-top: 1.5rem; }
+@keyframes pulse { 50% { opacity: 0.5; } }

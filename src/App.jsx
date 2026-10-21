@@ -21,23 +21,29 @@ function App() {
   useEffect(() => {
     const controller = new AbortController()
 
-    fetch('/api/vendors.json', { signal: controller.signal })
-      .then((res) => {
-        if (!res.ok) throw new Error(`HTTP ${res.status}`)
-        return res.json()
-      })
-      .then((data) => {
-        setVendors(data)
-        setSelectedVendorId(data[0].id) // select the first vendor once data arrives
-      })
-      .catch((err) => {
-        if (err.name !== 'AbortError') setError(err.message)
-      })
-      .finally(() => {
-        if (!controller.signal.aborted) setLoading(false)
-      })
+    // Stretch: wait 600 ms before fetching so the loading state is visible
+    const timer = setTimeout(() => {
+      fetch('/api/vendors.json', { signal: controller.signal })
+        .then((res) => {
+          if (!res.ok) throw new Error(`HTTP ${res.status}`)
+          return res.json()
+        })
+        .then((data) => {
+          setVendors(data)
+          setSelectedVendorId(data[0].id) // select the first vendor once data arrives
+        })
+        .catch((err) => {
+          if (err.name !== 'AbortError') setError(err.message)
+        })
+        .finally(() => {
+          if (!controller.signal.aborted) setLoading(false)
+        })
+    }, 600)
 
-    return () => controller.abort()
+    return () => {
+      clearTimeout(timer)
+      controller.abort()
+    }
   }, [reloadKey])
 
   function handleRetry() {
