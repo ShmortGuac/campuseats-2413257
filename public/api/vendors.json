@@ -1,0 +1,41 @@
+[
+  {
+    "id": "2413257-john-eats",
+    "name": "John Eats",
+    "location": "Mahallah Salahuddin",
+    "openHours": "6:00 am - 7:00 pm",
+    "isOpen": true,
+    "menu": [
+      { "id": "2413257-m1", "name": "John Lasagna", "description": "Baked layers of pasta, beef sauce and cheese", "price": 12, "category": "Pasta", "available": true, "popular": true },
+      { "id": "2413257-m2", "name": "John Burger", "description": "Beef patty, cheese, lettuce and tomato in a toasted bun", "price": 10, "category": "Burger", "available": true, "popular": true },
+      { "id": "2413257-m3", "name": "John Special", "description": "The chef's special of the day", "price": 15, "category": "Special", "available": false, "popular": false },
+      { "id": "2413257-m4", "name": "John Carbonara", "description": "Spaghetti in a creamy sauce with chicken slices", "price": 11, "category": "Pasta", "available": true, "popular": false },
+      { "id": "2413257-m5", "name": "John Chicken Burger", "description": "Crispy fried chicken fillet with mayo and lettuce", "price": 9, "category": "Burger", "available": true, "popular": false },
+      { "id": "2413257-m6", "name": "John Fries", "description": "Crispy fries with cheese sauce", "price": 5, "category": "Sides", "available": true, "popular": true },
+      { "id": "2413257-m7", "name": "John Iced Lemon Tea", "description": "Freshly brewed tea with lemon and ice", "price": 3.5, "category": "Drinks", "available": true, "popular": false },
+      { "id": "2413257-m8", "name": "John Mango Smoothie", "description": "Blended mango with milk and ice", "price": 6, "category": "Drinks", "available": true, "popular": false }
+    ]
+  },
+  {
+    "id": "0000001-kafe-aminah",
+    "name": "Kafe Mahallah Aminah",
+    "location": "Mahallah Aminah, Ground Floor",
+    "openHours": "8:00 am - 9:00 pm",
+    "isOpen": true,
+    "menu": [
+      { "id": "0000001-m1", "name": "Nasi Ayam Penyet", "description": "Smashed fried chicken with sambal and rice", "price": 9, "category": "Rice", "available": true, "popular": true },
+      { "id": "0000001-m2", "name": "Air Bandung", "description": "Rose syrup with milk", "price": 3, "category": "Drinks", "available": true, "popular": false }
+    ]
+  },
+  {
+    "id": "0000002-kopi-dahlia",
+    "name": "Kopi Dahlia",
+    "location": "Mahallah Asma, Block C",
+    "openHours": "8:00 am - 11:00 pm",
+    "isOpen": true,
+    "menu": [
+      { "id": "0000002-m1", "name": "Teh Tarik", "description": "Pulled milk tea", "price": 2.5, "category": "Drinks", "available": true, "popular": true },
+      { "id": "0000002-m2", "name": "Roti Canai", "description": "Flatbread with dhal curry", "price": 2, "category": "Bread", "available": true, "popular": false }
+    ]
+  }
+]
