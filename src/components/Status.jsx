@@ -1,4 +1,3 @@
-// Small components for the loading and error states of fetched data.
 export function Loading() {
   return (
     <div role="status" aria-label="Loading menus…">
